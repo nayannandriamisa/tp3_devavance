@@ -36,22 +36,20 @@
      
         <div class="credentials">
             <h1>Utilisateurs</h1>
-            <div class="titres" style="display: flex">
-                <h3 style="margin-right: 10px">UserName</h3>
-                <h3 style="margin-left: 10px">Authorized</h3>
-            </div>
-            
-            <div class="utilisateurs" style="display: flex">
-                <p style="margin-right: 45px">
-                    <jsp:scriptlet
+            <table>
+                <tr>
+                    <th>UserName</th>
+                    <th>Authorized</th>
+                </tr>
+                <tr>
+                    <td>
                         
-                    />
-                </p>
-                <p style="margin-left: 45px">
-                    
-                </p>
-                
-            </div>
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
             
         </div>
         
