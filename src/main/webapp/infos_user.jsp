@@ -41,14 +41,13 @@
                     <th>UserName</th>
                     <th>Authorized</th>
                 </tr>
-                <tr>
-                    <td>
-                        
-                    </td>
-                    <td>
-                        
-                    </td>
-                </tr>
+                <!-- 
+                    Il faut faire un scriptlet JSP qui récupère l'ArrayList stocké dans la session 
+                    et qui affiche sur une ligne (<tr>) les username et les auth dans des <td> 
+                -->
+                <jsp:scriptlet 
+                    
+                />
             </table>
             
         </div>
