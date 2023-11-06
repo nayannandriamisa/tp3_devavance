@@ -5,12 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="fr.devavance.metier.beans.User, fr.devavance.metier.beans.Users" %>
 
 
 
 <%-- Déclaration des des beans qui sont utilisés --%>
 <jsp:useBean id="User" scope="request" class="fr.devavance.metier.beans.User"/>
-<jsp:useBean id="Users" scope="session" class="fr.devavance.metier.beans.Users"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,12 +45,16 @@
                     Il faut faire un scriptlet JSP qui récupère l'ArrayList stocké dans la session 
                     et qui affiche sur une ligne (<tr>) les username et les auth dans des <td> 
                 -->
-                <jsp:scriptlet 
-                    
-                />
+                <% 
+                    Users users = (Users) request.getSession().getAttribute("users");
+                    for (int i = 0; i < users.size(); i++) {
+                        out.println("<tr>");
+                        out.println("<td>" + users.get(i).getUserName() + "</td>");
+                        out.println("<td>" + users.get(i).getAuth() + "</td>");
+                        out.println("</tr>");
+                    }
+                %>  
             </table>
-            
         </div>
-        
     </body>
 </html>

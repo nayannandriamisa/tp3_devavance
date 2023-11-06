@@ -35,7 +35,7 @@ public class InfosUserServlet extends HttpServlet {
         alan.setUserName("alan");
         alan.setProfil("admin");
         alan.setPassword("mp2023t");
-        alan.setAuth(Boolean.TRUE);
+        alan.setAuth(true);
         return alan;
     }
     
@@ -49,22 +49,17 @@ public class InfosUserServlet extends HttpServlet {
         users.add(new User("paul", "user", "pass2"));
         users.add(new User("amina", "admin", "pass1"));
         users.add(new User("karim", "user", "pass1"));
+        users.add(new User("jefferson", "password", "pass2"));
 
 
         // Farida a été authentifié
         users.get(0).setAuth(true);
         
+        users.get(4).setAuth(true);
+        
     }
+
     
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
